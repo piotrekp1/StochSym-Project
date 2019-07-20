@@ -1,0 +1,67 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{polski}
+\usepackage[utf8]{inputenc}
+\begin{document}
+
+\title{Model Chandrasekhara / Smoluchowskiego  - 1 pudełko}
+\author{Piotr Piękos}
+
+\maketitle
+
+\section{Oznaczenia}
+W celach notacyjnych rozbijemy proces $X(t)$ (ilość żyjących osób) na dwa procesy: 
+\begin{itemize}
+\item$N(t)$ - Ilość narodzin
+\item$S(t)$ - Ilość śmierci
+\end{itemize}
+Wtedy $X(t) = N(t) - S(t)$,
+Dodatkowo oznaczymy intensywności procesów przez:
+\begin{itemize}
+\item$a_N$ - intensywność procesu narodzin
+\item$a_S$ - parametr rozkładu wykładniczego odpowiadającego za długość życia
+\end{itemize}
+Dodatkowe oznaczenia:
+\begin{itemize}
+\item$I_X(t)$ - indeksy "żywych" zmiennych w momencie t.
+\item$W_i$ - zmienna losowa (o rozkładzie wykladniczym z parametrem $a_S$) mówiąca o długości życia osoby $i$
+\end{itemize}
+
+Możnaby spróbować zamodelować $S(t)$ jako niejednorodny proces poissona z intensywnością zależną od $N(t)$. Ja jednak to rozdzieliłem jedynie ze względów notacyjnych.
+
+\subsection{Prawa ewolucji}
+$P(X(t+h) = x + 1 | X(t) = 1)$:
+
+Korzystamy tutaj z faktu, że dla procesu Poissona (N) mamy: 
+\begin{itemize}
+\item $P(N(t+h) = n + 1 | N(t) = n) = a_N h + o(h)$
+\item $P(N(t+h) \geq n + 2 | N(t) = n) = o(h)$
+\end{itemize}
+Dodatkowo:
+\begin{itemize}
+\item $P(N(t+h) = n | N(t) = n) = 1 - a_N h + o(h)$
+\item $P(S(t+h) = s | S(t) = s, X(t) = x) = P(\forall_i \in I_X(t) W_i \geq h) + o(h) = \prod_{i \in I_X(t)} P(W_i \geq h) + o(h) = e^{-a_Sxh} + o(h) = 1 - a_Sxh + o(h)$
+\item $P(S(t+h) = s+1 | S(t) = s, X(t) = x) = x(e^{-a_S(x-1)h} - e^{-a_Sxh}) + o(h) = a_Sxh + o(h)$
+\item $P(S(t+h) = s+2 | S(t) = s, X(t) = x) = o(h)$
+\end{itemize}
+$o(h)$ pojawia się już po pierwszej równości ze względu na to, że przy dokładnym rozpisaniu prawdopodobienstw należałoby warunkować w którym momencie X(t) się zmieni (X jest zależny od S), jednak ta różnica jest $o(h)$, więc po prostu jest zawarta w tym.
+
+zatem
+\[P(X(t+h) = x+1 | X(t) = x) = \]
+\[P(N(t+h) = n + 1 | N(t) = n) \cdot P(S(t+h) = s| S(t) = s, X(t)=x) = \]
+\[(a_N h + o(h)) \cdot (1 - a_Sxh + o(h)) = \]
+\[a_N h + o(h) \] 
+
+\[P(X(t+h) = x-1 | X(t) = x) = \]
+\[P(N(t+h) = n | N(t) = n) \cdot P(S(t+h) = s+1| S(t) = s, X(t)=x) = \]
+\[(1 - a_N h + o(h)) \cdot (a_Sxh + o(h)) = \]
+\[a_S xh + o(h) \] 
+
+Czyli mamy \begin{itemize}
+\item$P(X(t+h) = x+1 | X(t) = x) = a_N h + o(h)$
+\item$P(X(t+h) = x-1 | X(t) = x) = a_S xh + o(h)$
+\end{itemize}
+wzory te razem z $Q(x,x) = 1-a_Nh - a_Sxh$ i zerami w pozostałych wierszach opisują intensywność przejść procesu Markowa
+
+
+\end{document}
