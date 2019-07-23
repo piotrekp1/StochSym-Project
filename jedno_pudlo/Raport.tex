@@ -2,8 +2,9 @@
 \usepackage{graphicx}
 \usepackage{polski}
 \usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\graphicspath{ {./wykresy/} }
 \begin{document}
-
 \title{Model Chandrasekhara / Smoluchowskiego  - 1 pudełko}
 \author{Piotr Piękos}
 
@@ -27,9 +28,9 @@ Dodatkowe oznaczenia:
 \item$W_i$ - zmienna losowa (o rozkładzie wykladniczym z parametrem $a_S$) mówiąca o długości życia osoby $i$
 \end{itemize}
 
-Możnaby spróbować zamodelować $S(t)$ jako niejednorodny proces poissona z intensywnością zależną od $N(t)$. Ja jednak to rozdzieliłem jedynie ze względów notacyjnych.
+Możnaby spróbować zamodelować $S(t)$ jako niejednorodny proces Poissona z intensywnością zależną od $N(t)$. Ja jednak to rozdzieliłem jedynie ze względów notacyjnych.
 
-\subsection{Prawa ewolucji}
+\section{Prawa ewolucji}
 $P(X(t+h) = x + 1 | X(t) = 1)$:
 
 Korzystamy tutaj z faktu, że dla procesu Poissona (N) mamy: 
@@ -61,7 +62,29 @@ Czyli mamy \begin{itemize}
 \item$P(X(t+h) = x+1 | X(t) = x) = a_N h + o(h)$
 \item$P(X(t+h) = x-1 | X(t) = x) = a_S xh + o(h)$
 \end{itemize}
-wzory te razem z $Q(x,x) = 1-a_Nh - a_Sxh$ i zerami w pozostałych wierszach opisują intensywność przejść procesu Markowa
+wzory te razem z $Q(x,x) = -a_Nh - a_Sxh$ i zerami w pozostałych wierszach opisują intensywność przejść procesu Markowa
+\section{Symulacje}
+\subsection{Algorytm}
+todo
+\subsection{Przykładowe trajektorie}
+\includegraphics{10,2}
+\includegraphics{100,2}
+\includegraphics{10,20}
+\includegraphics{1000,200}
+Wygenerowane wykresy są sparametryzowane 3 parametrami: \begin{itemize}
+\item $a\_N - a_N$
+\item $a\_S - a_S$
+\item rolling - długość horyzontu średniej kroczącej, średnia krocząca jest konieczna dla wielu wykresów ze względu na ogromną ilośc punktów na wykresie. Pokazuje jednak ona "gęstość" punktów.
+\end{itemize}
+W trajektoriach należy także zwrócić uwagę na skalę, gdyż ona odgrywa kluczową rolę.
 
+Od razu widać, że wyróżnioną liczbą jest $\frac{a_N}{a_S}$. Proces oscyluje w jej okolicach, co jest zrozumiałe po spojrzeniu na prawa ewolucji. Mówią one, że punkt $\frac{a_N}{a_S}$ jest punktem granicznym dla którego intensywność śmierci jest taka sama jak intensywność narodzin. 
 
+Możnaby pokusić się o alternatywną parametryzację procesu za pomocą parametrów $a = \frac{a_N}{a_S}$ i $b = a_S$, wtedy $a$ reprezentowałaby punkt w okół którego symulacja będzie oscylować, a b reprezentowałby gęstość punktow.
+
+Skyupmy się teraz na dwóch procesach o tym samym parametrze $a (\frac{a_N}{a_S}$. Są widoczne na pierwszym i ostatnim wykresie wyżej ($\frac{a_N}{a_S} = 5)$. Na wykresach widać po pierwsze większy parametr rolling który jest konieczny ze względu na większa gęstość punktów. Z tych wykresów możnaby też odczytać, że gęstszy wykres ma mniejsze odchylenia, jednak byłoby to błędne, gdyż jest to spowodowane jedynie wygładzeniem przez średnią kroczącą.
+\section{Analiza}
+\subsection{Istnienie rozkładu stacjonarnego}
+\subsection{Wartość oczekiwana}
+\subsection{Wyliczenie rozkładu stacjonarnego}
 \end{document}

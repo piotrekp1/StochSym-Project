@@ -36,4 +36,5 @@ def simulate_birth_death_process(t, a_N, a_S):
     df_total.sort_values(by='time', inplace=True)
     df_total['balance'] = 2 * (df_total['type'] == 'birth') - 1
     df_total['alive'] = df_total['balance'].cumsum()
-    return df_total
+
+    return df_total[df_total['time'] < t]
