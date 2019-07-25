@@ -3,6 +3,12 @@
 \usepackage{polski}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
+
+\usepackage{subcaption}
+\usepackage{algpseudocode}
+
+
+\usepackage[a5paper]{geometry}
 \graphicspath{ {./wykresy/} }
 \begin{document}
 \title{Model Chandrasekhara / Smoluchowskiego  - 1 pudełko}
@@ -65,12 +71,29 @@ Czyli mamy \begin{itemize}
 wzory te razem z $Q(x,x) = -a_Nh - a_Sxh$ i zerami w pozostałych wierszach opisują intensywność przejść procesu Markowa
 \section{Symulacje}
 \subsection{Algorytm}
-todo
+Algorytm symulacji składa się z dwóch części: \begin{enumerate}
+\item standardowa symulacja procesu Poissona (czasy narodzin)
+\item symulacja czasów życia z rozkładu wykładniczego o parametrze $a_S$
+\end{enumerate}
+Konkretnie:
+
+
+\begin{algorithmic}
+\State Gen $N \sim \textit{Poiss}(a_Nt)$
+\State for $i = 1$ to N do Gen $U_i \sim U(0, t)$, Gen $L_i \sim \textit{Exp}(1/a_S)$
+\State $(T_1, ..., T_n) =$ Sort$(U_1, ..., U_n)$ otrzymujemy proces Poissona, czasy narodzin
+\State $(D_1, ..., D_n) = (T_1 + L_1, ..., T_n + L_n)$ - dodajemy niezalezne czasy zycia do czasow narodzin i mamy czasy smierci.
+\end{algorithmic}
 \subsection{Przykładowe trajektorie}
-\includegraphics{10,2}
-\includegraphics{100,2}
-\includegraphics{10,20}
-\includegraphics{1000,200}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.4\linewidth]{10,2}
+\includegraphics[width=0.4\linewidth]{100,2}
+\includegraphics[width=0.4\linewidth]{10,20}
+\includegraphics[width=0.4\linewidth]{1000,200}
+\caption{Przykładowe trajektorie symulacji}
+\end{figure}
 Wygenerowane wykresy są sparametryzowane 3 parametrami: \begin{itemize}
 \item $a\_N - a_N$
 \item $a\_S - a_S$
