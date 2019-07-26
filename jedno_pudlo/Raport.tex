@@ -83,7 +83,11 @@ Konkretnie:
 \State for $i = 1$ to N do Gen $U_i \sim U(0, t)$, Gen $L_i \sim \textit{Exp}(1/a_S)$
 \State $(T_1, ..., T_n) =$ Sort$(U_1, ..., U_n)$ otrzymujemy proces Poissona, czasy narodzin
 \State $(D_1, ..., D_n) = (T_1 + L_1, ..., T_n + L_n)$ - dodajemy niezalezne czasy zycia do czasow narodzin i mamy czasy smierci.
-\end{algorithmic}
+\end{algorithmic}  
+
+
+Algorytm korzysta z gotowych bibliotek (numpy) do symulacji rozkładów Poissona i rozkładu wykładniczego. Dodatkowo wykorzystuje w nich możliwość wektoryzacji. Ale można to zrobić surowo od rozkładu jednostajnego np. za pomocą metody odwracania dystrybuanty oraz chociażby metody eliminacji.
+
 \subsection{Przykładowe trajektorie}
 
 \begin{figure}[h!]
