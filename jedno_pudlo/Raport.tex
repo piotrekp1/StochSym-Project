@@ -6,7 +6,7 @@
 
 \usepackage{subcaption}
 \usepackage{algpseudocode}
-
+\usepackage{amssymb}
 
 \usepackage[a5paper]{geometry}
 \graphicspath{ {./wykresy/} }
@@ -111,7 +111,25 @@ Możnaby pokusić się o alternatywną parametryzację procesu za pomocą parame
 
 Skyupmy się teraz na dwóch procesach o tym samym parametrze $a (\frac{a_N}{a_S}$. Są widoczne na pierwszym i ostatnim wykresie wyżej ($\frac{a_N}{a_S} = 5)$. Na wykresach widać po pierwsze większy parametr rolling który jest konieczny ze względu na większa gęstość punktów. Z tych wykresów możnaby też odczytać, że gęstszy wykres ma mniejsze odchylenia, jednak byłoby to błędne, gdyż jest to spowodowane jedynie wygładzeniem przez średnią kroczącą.
 \section{Analiza}
-\subsection{Istnienie rozkładu stacjonarnego}
+\subsection{Rozkładu stacjonarnego}
+
+Empiryczną masę rozkładu można łatwo zdefiniować przez częstość występowania procesu w danym stanie (gdzie stan jest zdefiniowany przez ilość żywych osób).
+
+czyli \[P(X = n) = \frac{\int \mathbb{I}_{\{X(t) = n\}} dt}{t}  \]
+
+Symulacyjnie rozkład jest stabilny od parametrów, dodatkowo statystyką dostateczną dla rozkładu jest $\frac{a_N}{a_S}$.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.6\linewidth]{rozklad10,2}
+\caption{Przykładowa symulacja dla $a_N=10, a_S=2, t=100000$}
+\end{figure}
 \subsection{Wartość oczekiwana}
-\subsection{Wyliczenie rozkładu stacjonarnego}
+
+Mając empiryczny rozkład prawdopodobieństwa wartość oczekiwana jest prostolinijna do policzenia za pomocą tradycyjnego wzoru na wartość oczekiwaną.
+
+z symulacji jasno wynika, że \[\lim_{t\rightarrow \infty}\mathbb{E}X = \frac{a_N}{a_S}\]
+\subsection{Postać rozkładu stacjonarnego i testy statystyczne}
+Rozkład stacjonarny można wyprowadzić z zależności $\pi  Q = 0$ lub zgadnąć na podstawie symulacji. 
+\[\pi = Poiss(\frac{a_N}{a_S})\]
 \end{document}
