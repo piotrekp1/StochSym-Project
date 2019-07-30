@@ -132,4 +132,19 @@ z symulacji jasno wynika, że \[\lim_{t\rightarrow \infty}\mathbb{E}X = \frac{a_
 \subsection{Postać rozkładu stacjonarnego i testy statystyczne}
 Rozkład stacjonarny można wyprowadzić z zależności $\pi  Q = 0$ lub zgadnąć na podstawie symulacji. 
 \[\pi = Poiss(\frac{a_N}{a_S})\]
+
+Aby sprawdzić ten rezultat wykonałem test Kołmogorova-Smirnova. Porównałem w nim rozkład empiryczny (podany wyżej) z oczekiwanym rozkładem - $Poiss(\frac{a_N}{a_S})$
+
+Interesuje nas istotność statystyczna na poziomie $\alpha = 0.05$. Z tabelek testu KS wnioskujemy, że wartość graniczna dla nas to $\frac{1.36}{\sqrt{n}}$. 
+
+Żeby sprawdzić hipotezę potrzebne jest policzenie statystyki Kołmogorowa: $\sup_n |F_n(x) - F(x)| $. Standardowo w przypadku gdy jest ona większa niż wartość graniczna odrzucamy tezę, a w przypadku gdy jest mniejsza wnioskujemy, że nie ma istotnych statystycznie różnic i nie można wnioskować, że te rozkłady są różne. Uznamy to za akceptację naszej tezy.
+
+Do celów testów został zasymulowany proces przez 100000 jednostek czasu z parametrami $a_N = 10, a_S = 5$. 
+Sprawdzamy więc, czy rozkład jest statystycznie różny od $Poiss(2)$
+ \[\sup_n |F_n(x) - F(x)| = 0.000793 < 0.000961 = \frac{1.36}{\sqrt{n}}\]
+Zakładam tutaj, że n to ilość przejść procesu - w tym przypadku $2001615$. Nie jestem jednak przekonany co do słuszności tego testu, jako, że takie n nie uwzględnia czasów trwania w poszczególnych stanach.
+
+todo: sprawdzenie innych $a_N i a_S$
+
+Skoro test nie pokazał istotnej różnicy między rozkładami uznajemy, że nasz rozkład stacjonarny jest postaci $Poiss(2)$ dla $a_N = 10, a_S = 2$
 \end{document}
