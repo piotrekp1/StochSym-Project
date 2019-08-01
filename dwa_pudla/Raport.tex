@@ -31,6 +31,20 @@ dla każdego innego przejścia prawdopodobieństwo to $o(h)$
 
 Przy naturalnych założeniach $x_1 > 0$ lub $x_2 > 0$ kiedy się zmniejsza.
 
+\section{Algorytm}
 
+Algorytm jest naturalnym rozszerzeniem algorytmu symulacji jednego pudełka
+
+
+
+\begin{algorithmic}
+\State Gen $N \sim \textit{Poiss}(a_Nt)$
+\State for $i = 1$ to N do Gen $U_i \sim U(0, t)$, Gen $L1_i \sim \textit{Exp}(1/a_{S_1})$, Gen $L2_i \sim \textit{Exp}(1/a_{S_2})$
+\State $(T_1, ..., T_n) =$ Sort$(U_1, ..., U_n)$ otrzymujemy proces Poissona, czasy narodzin
+\State $(D1_1, ..., D1_n) = (T_1 + L1_1, ..., T_n + L1_n)$ - dodajemy niezalezne czasy zycia do czasow narodzin i mamy czasy przejscia do drugiego pudelka.
+\State $(D2_1, ..., D2_n) = (D1_1 + L2_1, ..., D1_n + L2_n)$ - dodajemy niezalezne czasy zycia do czasow narodzin i mamy czasy smierci.
+\end{algorithmic}  
+
+Czyli od poprzedniego algorytmu różni się jedynie tym że losujemy dodatkowo czasy przebywania w drugim pudełku.
 
 \end{document}
