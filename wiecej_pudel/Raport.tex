@@ -1,0 +1,50 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{polski}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+\usepackage{subcaption}
+\usepackage{algpseudocode}
+\usepackage{amssymb}
+
+\usepackage[a5paper]{geometry}
+\graphicspath{ {./wykresy/} }
+\begin{document}
+\title{Model Chandrasekhara / Smoluchowskiego  - 2 pudła}
+\author{Piotr Piękos}
+
+\maketitle
+
+W tym przypadku rozpatrujemy przypadek z dwoma pudełkami. 
+
+Osoba "rodzi się" na podstawie procesu Poissona z częstotliwością $a_N$ trafiając do pudełka 1, spędza tam czas będący zmienną losową o rozkładzie wykładniczym z parametrem $a_{S_1}$. Następnie przechodzi do drugiego pudełka w którym spędza czas będący zmienną losową o rozkładzie wykładniczym z parametrem $a_{S_2}$
+\section{Prawa Ewolucji}
+
+Prawa ewolucji są naturalnym rozszerzem praw ewolucji z procesu dla jednego pudełka. W szczególności pierwsze pudełko musi operować na dokładnie tych samych zasadach co poprzednio.
+
+\[P(X_1(t+h) = x_1 + 1, X_2(t+h)=x_2 | X_1(t) = x_1, X_2(t) = x_2) = a_N h + o(h)\]
+\[P(X_1(t+h) = x_1 - 1, X_2(t+h)=x_2 + 1| X_1(t) = x_1, X_2(t) = x_2) = a_{S_1} xh + o(h)\]
+\[P(X_1(t+h) = x_1, X_2(t+h)=x_2 - 1| X_1(t) = x_1, X_2(t) = x_2) = a_{S_2} xh + o(h)\]
+\[P(X_1(t+h) = x_1, X_2(t+h)=x_2| X_1(t) = x_1, X_2(t) = x_2) = 1 - (a_{S_1}  + a_{S_2})xh + o(h)\]
+dla każdego innego przejścia prawdopodobieństwo to $o(h)$
+
+Przy naturalnych założeniach $x_1 > 0$ lub $x_2 > 0$ kiedy się zmniejsza.
+
+\section{Algorytm}
+
+Algorytm jest naturalnym rozszerzeniem algorytmu symulacji jednego pudełka
+
+
+
+\begin{algorithmic}
+\State Gen $N \sim \textit{Poiss}(a_Nt)$
+\State for $i = 1$ to N do Gen $U_i \sim U(0, t)$, Gen $L1_i \sim \textit{Exp}(1/a_{S_1})$, Gen $L2_i \sim \textit{Exp}(1/a_{S_2})$
+\State $(T_1, ..., T_n) =$ Sort$(U_1, ..., U_n)$ otrzymujemy proces Poissona, czasy narodzin
+\State $(D1_1, ..., D1_n) = (T_1 + L1_1, ..., T_n + L1_n)$ - dodajemy niezalezne czasy zycia do czasow narodzin i mamy czasy przejscia do drugiego pudelka.
+\State $(D2_1, ..., D2_n) = (D1_1 + L2_1, ..., D1_n + L2_n)$ - dodajemy niezalezne czasy zycia do czasow narodzin i mamy czasy smierci.
+\end{algorithmic}  
+
+Czyli od poprzedniego algorytmu różni się jedynie tym że losujemy dodatkowo czasy przebywania w drugim pudełku.
+
+\end{document}
