@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.6.29)  1 AUG 2019 17:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.6.29)  7 AUG 2019 18:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -704,32 +704,34 @@ r/m/n/10 )
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] (./Raport.aux) ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] (./Raport.aux) ) 
 Here is how much of TeX's memory you used:
  4374 strings out of 492982
  63802 string characters out of 6134896
- 124696 words of memory out of 5000000
+ 125696 words of memory out of 5000000
  7857 multiletter control sequences out of 15000+600000
  15289 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,6n,40p,368b,210s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/
-share/texlive/texmf-dist/fonts/enc/dvips/pl/plit.enc}{/usr/share/texlive/texmf-
-dist/fonts/enc/dvips/pl/plms.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips
-/pl/plrm.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/pl/plsc.enc}{/usr/s
-hare/texlive/texmf-dist/fonts/enc/dvips/pl/plmi.enc}</usr/share/texlive/texmf-d
-ist/fonts/type1/public/pl/plbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/pl/plmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plmi
-7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plr10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/pl/plr12.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/pl/plr17.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/pl/plr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plr7.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plsy10.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/pl/plti10.pfb>
-Output written on Raport.pdf (2 pages, 58947 bytes).
+ 42i,6n,40p,544b,210s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/
+usr/share/texlive/texmf-dist/fonts/enc/dvips/pl/plms.enc}{/usr/share/texlive/te
+xmf-dist/fonts/enc/dvips/pl/plit.enc}{/usr/share/texlive/texmf-dist/fonts/enc/d
+vips/pl/plrm.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/pl/plsc.enc}{/u
+sr/share/texlive/texmf-dist/fonts/enc/dvips/pl/plmi.enc}</usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/pl/plbx12.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/pl/plmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/p
+lmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plr10.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/pl/plr12.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/pl/plr17.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/pl/plr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plr
+7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plsy10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/pl/plsy7.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/pl/plti10.pfb>
+Output written on Raport.pdf (3 pages, 67221 bytes).
 PDF statistics:
- 56 PDF objects out of 1000 (max. 8388607)
- 41 compressed objects within 1 object stream
+ 67 PDF objects out of 1000 (max. 8388607)
+ 49 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

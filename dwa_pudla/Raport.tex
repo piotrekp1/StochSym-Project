@@ -47,4 +47,16 @@ Algorytm jest naturalnym rozszerzeniem algorytmu symulacji jednego pudełka
 
 Czyli od poprzedniego algorytmu różni się jedynie tym że losujemy dodatkowo czasy przebywania w drugim pudełku.
 
+\section{Przykładowe trajektorie}
+
+\section{Rozkład}
+
+Zacznijmy od wartości oczekiwanych. Licząc podobnie jak dla pojedynczego pudełka mozna zauważyć, że 
+
+\[\lim_{t\rightarrow \infty}\mathbb{E}X_1 = \frac{a_N}{a_{S1}} \]
+\[\lim_{t\rightarrow \infty}\mathbb{E}X_2 = \frac{a_N}{a_{S2}} \]
+
+Zgadza sie to z oczekiwaniami:
+$X_1$ zachowuje się dokładnie tak samo jak w przypadku jednego pudła, więc wynik jest ten sam. $\mathbb{E}X_2$ bierze się stąd, że pierwsze pudło jedynie opóźnia trafienie cząstek do pudełka 2. Czyli można na to patrzeć również jak na model z jednym pudłem tylko teraz cząstka rodzi się z intensywnością $a_N$. Nastepnie czeka jakiś czas (czekanie spowodowane pierwszym pudełkiem) i trafia do pudełka numer 2. Czekanie nie wpływa jednak na średnią ilość cząstek będących w pudełku numer 2.
+
 \end{document}
