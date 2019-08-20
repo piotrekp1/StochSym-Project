@@ -55,16 +55,18 @@ def simulate_multibox(nodes, transitions, t):
 
         history.append(current_state.loc[active_points_in_curr_node.index].copy())
         current_node = current_node % NODES + 1
-    return pd.concat(history).reset_index(drop=True)
+    df_history = pd.concat(history).reset_index(drop=True)
+    df_history = df_history[df_history['time'] < t]
+    return df_history
 
 
-def simulate_multibox_csv(scheme_name, t, output_file):
+def simulate_multibox_csv(scheme_name, t):
     """
     Simulate multibox process on the base of scheme named scheme_name
     :param scheme_name: name of the directory with description files
     :param t: length of the process
-    :param output_file: name of the file to save the history
+    :return: dataframe with process events history
     """
     nodes, transitions = parse_input(scheme_name)
     process = simulate_multibox(nodes, transitions, t)
-    process.to_csv(output_file, index=False)
+    return process
