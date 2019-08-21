@@ -7,9 +7,10 @@
 \usepackage{subcaption}
 \usepackage{algpseudocode}
 \usepackage{amssymb}
+\usepackage{listings}
 
 \usepackage[a5paper]{geometry}
-\graphicspath{ {./wykresy/} }
+\graphicspath{ {./obrazki/} }
 \begin{document}
 \title{Model Chandrasekhara / Smoluchowskiego  - dowolna kombinacja pudeł}
 \author{Piotr Piękos}
@@ -81,6 +82,42 @@ Taka realizacja algorytmu pozwala na wektorową realizację losowania czasów ż
 \end{algorithmic} 
 
 
-\section{Przykładowe trajektorie}
+\section{Przykłady}
 
+\subsection{Przykładowe grafy}
+
+Przykładami są 2 stworzone przeze mnie proste grafy demonstrujące główne funkcjonalności
+
+Oznaczenia:
+
+W wierzchołkach podane są intensywności rodzenia i parametry czasu życia w postaci $a_N | a_S$
+na krawędziach podane są prawdopodobieństwa przejścia. Jeśli wychodzące krawędzie z wierzchołka nie sumują się do 1 to znaczy, że reszta to jest prawdopodobieństwo śmierci (wierzchołek w którym są martwe cząsteczki nie jest explicite rysowany)
+
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.6\linewidth]{kolko}
+\caption{\textbf{Kolko}. W początkowym wierzchołku (lewym dolnym) cząstki rodzą się z intensywnością 1 oraz parametr rozkładu wykładniczego z którego losowany jest czas życia wynosi 1. W pozostałych wierzchołkach nigdy się nie rodzi żadna cząstka i parametr długości życia wynosi 1.}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.6\linewidth]{koniczynka}
+\caption{\textbf{Koniczynka}. Tutaj w dwóch (lewym i prawym) wierzchołkach rodzą się cząsteczki. Mogą umrzeć natomiast jedynie w górnym i dolnym.}
+\end{figure}\newpage
+Parametry wybrane jako 1 dla prostoty, oczywiście nic nie stoi na przeszkodzie, żeby były dowolne
+
+\subsection{Kolko}
+\subsection{Koniczynka}
+
+\section{Uruchamianie symulacji}
+\noindent kod do uruchamiania symulacji - w folderze wiecej\_pudla::
+\begin{lstlisting}[language=bash]
+  $ python3 sym.py t scheme_name output_file 
+\end{lstlisting}
+gdzie: \begin{itemize}
+\item t - czas trwania symulacji
+\item scheme\_name - nazwa schematu, folderu w którym są trzymane informacje o schemacie. Na przykład kolko albo koniczynka.
+\item output\_file - nazwa pliku do którego ma się zapisać symulacja (csv)
+\end{itemize}
 \end{document}

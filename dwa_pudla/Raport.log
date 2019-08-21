@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.6.29)  21 AUG 2019 17:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.6.29)  21 AUG 2019 20:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -467,6 +467,31 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count97
+\lst@gtempboxa=\box26
+\lst@token=\toks18
+\lst@length=\count98
+\lst@currlwidth=\dimen112
+\lst@column=\count99
+\lst@pos=\count100
+\lst@lostspace=\dimen113
+\lst@width=\dimen114
+\lst@newlines=\count101
+\lst@lineno=\count102
+\lst@maxwidth=\dimen115
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count103
+\lst@skipnumbers=\count104
+\lst@framebox=\box27
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
 (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
@@ -480,48 +505,48 @@ Package ifvtex Info: VTeX not detected.
 (/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count97
-\Gm@cntv=\count98
-\c@Gm@tempcnt=\count99
-\Gm@bindingoffset=\dimen112
-\Gm@wd@mp=\dimen113
-\Gm@odd@mp=\dimen114
-\Gm@even@mp=\dimen115
-\Gm@layoutwidth=\dimen116
-\Gm@layoutheight=\dimen117
-\Gm@layouthoffset=\dimen118
-\Gm@layoutvoffset=\dimen119
-\Gm@dimlist=\toks18
+\Gm@cnth=\count105
+\Gm@cntv=\count106
+\c@Gm@tempcnt=\count107
+\Gm@bindingoffset=\dimen116
+\Gm@wd@mp=\dimen117
+\Gm@odd@mp=\dimen118
+\Gm@even@mp=\dimen119
+\Gm@layoutwidth=\dimen120
+\Gm@layoutheight=\dimen121
+\Gm@layouthoffset=\dimen122
+\Gm@layoutvoffset=\dimen123
+\Gm@dimlist=\toks19
 ) (./Raport.aux)
 \openout1 = `Raport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count100
-\scratchdimen=\dimen120
-\scratchbox=\box26
-\nofMPsegments=\count101
-\nofMParguments=\count102
-\everyMPshowfont=\toks19
-\MPscratchCnt=\count103
-\MPscratchDim=\dimen121
-\MPnumerator=\count104
-\makeMPintoPDFobject=\count105
-\everyMPtoPDFconversion=\toks20
+\scratchcounter=\count108
+\scratchdimen=\dimen124
+\scratchbox=\box28
+\nofMPsegments=\count109
+\nofMParguments=\count110
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count111
+\MPscratchDim=\dimen125
+\MPnumerator=\count112
+\makeMPintoPDFobject=\count113
+\everyMPtoPDFconversion=\toks21
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -575,7 +600,9 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count114
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -611,46 +638,46 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Try loading font information for OML+plm on input line 17.
+LaTeX Font Info:    Try loading font information for OML+plm on input line 18.
 (/usr/share/texlive/texmf-dist/tex/latex/polski/omlplm.fd
 File: omlplm.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Try loading font information for OMS+plsy on input line 17.
+LaTeX Font Info:    Try loading font information for OMS+plsy on input line 18.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/polski/omsplsy.fd
 File: omsplsy.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Try loading font information for OMX+plex on input line 17.
+LaTeX Font Info:    Try loading font information for OMX+plex on input line 18.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/polski/omxplex.fd
 File: omxplex.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <12> on input line 17.
+(Font)              <12> on input line 18.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <8> on input line 17.
+(Font)              <8> on input line 18.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <6> on input line 17.
-LaTeX Font Info:    Try loading font information for U+msa on input line 17.
+(Font)              <6> on input line 18.
+LaTeX Font Info:    Try loading font information for U+msa on input line 18.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 17.
+LaTeX Font Info:    Try loading font information for U+msb on input line 18.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <10> on input line 21.
+(Font)              <10> on input line 22.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <7> on input line 21.
+(Font)              <7> on input line 22.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <5> on input line 21.
+(Font)              <5> on input line 22.
 
-Overfull \hbox (21.2482pt too wide) detected at line 26
+Overfull \hbox (21.2482pt too wide) detected at line 27
 \OML/plm/m/it/10 P\OT4/cmr/m/n/10 (\OML/plm/m/it/10 X[]\OT4/cmr/m/n/10 (\OML/pl
 m/m/it/10 t \OT4/cmr/m/n/10 + \OML/plm/m/it/10 h\OT4/cmr/m/n/10 ) = \OML/plm/m/
 it/10 x[] \OT4/cmr/m/n/10 + 1\OML/plm/m/it/10 ; X[]\OT4/cmr/m/n/10 (\OML/plm/m/
@@ -663,7 +690,7 @@ cmr/m/n/10 )
  []
 
 
-Overfull \hbox (41.46983pt too wide) detected at line 27
+Overfull \hbox (41.46983pt too wide) detected at line 28
 \OML/plm/m/it/10 P\OT4/cmr/m/n/10 (\OML/plm/m/it/10 X[]\OT4/cmr/m/n/10 (\OML/pl
 m/m/it/10 t \OT4/cmr/m/n/10 + \OML/plm/m/it/10 h\OT4/cmr/m/n/10 ) = \OML/plm/m/
 it/10 x[] \OMS/plsy/m/n/10 ^^@ \OT4/cmr/m/n/10 1\OML/plm/m/it/10 ; X[]\OT4/cmr/
@@ -676,7 +703,7 @@ X[]\OT4/cmr/m/n/10 (\OML/plm/m/it/10 t\OT4/cmr/m/n/10 ) = \OML/plm/m/it/10 x[];
  []
 
 
-Overfull \hbox (28.69202pt too wide) detected at line 28
+Overfull \hbox (28.69202pt too wide) detected at line 29
 \OML/plm/m/it/10 P\OT4/cmr/m/n/10 (\OML/plm/m/it/10 X[]\OT4/cmr/m/n/10 (\OML/pl
 m/m/it/10 t \OT4/cmr/m/n/10 + \OML/plm/m/it/10 h\OT4/cmr/m/n/10 ) = \OML/plm/m/
 it/10 x[]; X[]\OT4/cmr/m/n/10 (\OML/plm/m/it/10 t \OT4/cmr/m/n/10 + \OML/plm/m/
@@ -689,7 +716,7 @@ T4/cmr/m/n/10 )
  []
 
 
-Overfull \hbox (58.84679pt too wide) detected at line 29
+Overfull \hbox (58.84679pt too wide) detected at line 30
 \OML/plm/m/it/10 P\OT4/cmr/m/n/10 (\OML/plm/m/it/10 X[]\OT4/cmr/m/n/10 (\OML/pl
 m/m/it/10 t \OT4/cmr/m/n/10 + \OML/plm/m/it/10 h\OT4/cmr/m/n/10 ) = \OML/plm/m/
 it/10 x[]; X[]\OT4/cmr/m/n/10 (\OML/plm/m/it/10 t \OT4/cmr/m/n/10 + \OML/plm/m/
@@ -708,54 +735,61 @@ r/m/n/10 )
 <./wykresy/10,1,2.png, id=15, 379.4175pt x 279.0425pt>
 File: ./wykresy/10,1,2.png Graphic file (type png)
 <use ./wykresy/10,1,2.png>
-Package pdftex.def Info: ./wykresy/10,1,2.png  used on input line 54.
+Package pdftex.def Info: ./wykresy/10,1,2.png  used on input line 55.
 (pdftex.def)             Requested size: 117.9059pt x 86.7109pt.
 <./wykresy/10,5,1.png, id=17, 379.4175pt x 279.0425pt>
 File: ./wykresy/10,5,1.png Graphic file (type png)
 <use ./wykresy/10,5,1.png>
-Package pdftex.def Info: ./wykresy/10,5,1.png  used on input line 55.
+Package pdftex.def Info: ./wykresy/10,5,1.png  used on input line 56.
 (pdftex.def)             Requested size: 117.9059pt x 86.7109pt.
 <./wykresy/10,20,10,1000.png, id=18, 395.4775pt x 279.0425pt>
 File: ./wykresy/10,20,10,1000.png Graphic file (type png)
 <use ./wykresy/10,20,10,1000.png>
-Package pdftex.def Info: ./wykresy/10,20,10,1000.png  used on input line 56.
+Package pdftex.def Info: ./wykresy/10,20,10,1000.png  used on input line 57.
 (pdftex.def)             Requested size: 117.9059pt x 83.19392pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 60.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 61.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 60.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 61.
  [2] [3 <./wykresy/10,1,2.png> <./wykresy/10,5,1.png> <./wykresy/10,20,10,1000.
-png>] [4] (./Raport.aux) ) 
+png>]
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+) [4] [5]
+(./Raport.aux) ) 
 Here is how much of TeX's memory you used:
- 4414 strings out of 492982
- 64565 string characters out of 6134896
- 126696 words of memory out of 5000000
- 7889 multiletter control sequences out of 15000+600000
+ 6147 strings out of 492982
+ 87144 string characters out of 6134896
+ 162386 words of memory out of 5000000
+ 9604 multiletter control sequences out of 15000+600000
  15793 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,6n,40p,1041b,275s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/pl/plm
-s.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/pl/plit.enc}{/usr/share/te
-xlive/texmf-dist/fonts/enc/dvips/pl/plrm.enc}{/usr/share/texlive/texmf-dist/fon
-ts/enc/dvips/pl/plsc.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/pl/plmi
-.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/pl/plbx12.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/pl/plmi10.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/pl/plmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/pl/plr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plr12.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/pl/plr17.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/pl/plr5.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/pl/plr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/p
-l/plsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plsy7.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/pl/plti10.pfb>
-Output written on Raport.pdf (4 pages, 183486 bytes).
+ 42i,6n,51p,1032b,1114s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/pl/plms.enc}{/us
+r/share/texlive/texmf-dist/fonts/enc/dvips/pl/plit.enc}{/usr/share/texlive/texm
+f-dist/fonts/enc/dvips/pl/plrm.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvi
+ps/pl/plsc.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/pl/plmi.enc}</usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/pl/plbx12.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/pl/plmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/pl/plmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plr10
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plr12.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/pl/plr17.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/pl/plr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/pl/plr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plsy10.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plsy7.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/pl/plti10.pfb>
+Output written on Raport.pdf (5 pages, 185600 bytes).
 PDF statistics:
- 81 PDF objects out of 1000 (max. 8388607)
- 55 compressed objects within 1 object stream
+ 84 PDF objects out of 1000 (max. 8388607)
+ 57 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

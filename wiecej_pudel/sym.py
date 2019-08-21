@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import sys
 
 
 def parse_input(scheme_name):
@@ -8,13 +9,13 @@ def parse_input(scheme_name):
     :param scheme_name: name of the directory with necessary files
     :return: nodes, transitions - parsed csv files describing the chain of the process
     """
-    transitions = pd.read_csv(f'{scheme_name}/transitions', sep=' ', header=None).values
-    nodes = pd.read_csv(f'{scheme_name}/nodes', sep=' ', names=['birth_rate', 'lifetime'])
+    transitions = pd.read_csv(f'{scheme_name}/transitions', sep=' ', header=None).astype(float).values
+    nodes = pd.read_csv(f'{scheme_name}/nodes', sep=' ', names=['birth_rate', 'lifetime']).astype(float)
     nodes.index += 1
     return nodes, transitions
 
 
-def simulate_multibox(nodes, transitions, t):
+def simulate_multibox(t, nodes, transitions):
     """
     Simulates box process with custom graph transitions and birth and death intensities.
     :param nodes: dataframe with columns: 'birth_rate', 'lifetime', that describes chain nodes
@@ -56,11 +57,10 @@ def simulate_multibox(nodes, transitions, t):
         history.append(current_state.loc[active_points_in_curr_node.index].copy())
         current_node = current_node % NODES + 1
     df_history = pd.concat(history).reset_index(drop=True)
-    df_history = df_history[df_history['time'] < t]
-    return df_history
+    return df_history[df_history['time'] < t]
 
 
-def simulate_multibox_csv(scheme_name, t):
+def simulate_multibox_from_scheme(t, scheme_name):
     """
     Simulate multibox process on the base of scheme named scheme_name
     :param scheme_name: name of the directory with description files
@@ -68,5 +68,12 @@ def simulate_multibox_csv(scheme_name, t):
     :return: dataframe with process events history
     """
     nodes, transitions = parse_input(scheme_name)
-    process = simulate_multibox(nodes, transitions, t)
+    process = simulate_multibox(t, nodes, transitions)
     return process
+
+
+if __name__ == '__main__':
+    t, scheme_name, output_file = sys.argv[1:4]
+    t = float(t)
+    df = simulate_multibox_from_scheme(t, scheme_name)
+    df.to_csv(output_file)

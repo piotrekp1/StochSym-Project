@@ -7,6 +7,7 @@
 \usepackage{subcaption}
 \usepackage{algpseudocode}
 \usepackage{amssymb}
+\usepackage{listings}
 
 \usepackage[a5paper]{geometry}
 \graphicspath{ {./wykresy/} }
@@ -80,6 +81,20 @@ Kowariancję estymujemy ze wzoru \[COV(X,Y) = \mathbb{E}XY - \mathbb{E}X \mathbb
 Generuje to problemy z obciążeniem, (stopnie swobody estymatora wariancji). Jednak skorzystamy tutaj zgodności i oszacujemy to za pomocą dostatecznie dużej próbki, żeby obciążenie było zaniedbywalne
 
 Po symulacjach z różnymi parametrami doszedłem do wniosku, że zawartości pudełek są nieskorelowane, tzn \[COV(X,Y) = 0\]
+
+
+\section{Uruchamianie symulacji}
+\noindent kod do uruchamiania symulacji - w folderze dwa\_pudla:
+\begin{lstlisting}[language=bash]
+  $ python3 sym.py t a_N a_S1 a_S2 output_file 
+\end{lstlisting}
+gdzie: \begin{itemize}
+\item t - czas trwania symulacji
+\item a\_N - intensywność procesu narodzin
+\item a\_S1 - Parametr rozkładu czasu przebywania w pierwszym pudle
+\item a\_S2 - Parametr rozkładu czasu przebywania w drugim pudle
+\item output\_file - nazwa pliku do którego ma się zapisać symulacja (csv)
+\end{itemize}
 
 
 \end{document}

@@ -7,6 +7,7 @@
 \usepackage{subcaption}
 \usepackage{algpseudocode}
 \usepackage{amssymb}
+\usepackage{listings}
 
 \usepackage[a5paper]{geometry}
 \graphicspath{ {./wykresy/} }
@@ -148,4 +149,16 @@ Zakładam tutaj, że n to ilość przejść procesu - w tym przypadku $2001615$.
 todo: sprawdzenie innych $a_N i a_S$
 
 Skoro test nie pokazał istotnej różnicy między rozkładami uznajemy, że nasz rozkład stacjonarny jest postaci $Poiss(2)$ dla $a_N = 10, a_S = 2$
+
+\section{Uruchamianie symulacji}
+\noindent kod do uruchamiania symulacji - w folderze jedno\_pudla::
+\begin{lstlisting}[language=bash]
+  $ python3 sym.py t a_N a_S output_file 
+\end{lstlisting}
+gdzie: \begin{itemize}
+\item t - czas trwania symulacji
+\item a\_N - intensywność procesu narodzin
+\item a\_S - Parametr rozkładu czasu życia
+\item output\_file - nazwa pliku do którego ma się zapisać symulacja (csv)
+\end{itemize}
 \end{document}

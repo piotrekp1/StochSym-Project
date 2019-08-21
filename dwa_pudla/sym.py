@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-
+import sys
 
 def simulate_two_boxes_times(t, a_N, a_S1, a_S2):
     """
@@ -47,3 +47,10 @@ def simulate_two_boxes_process(t, a_N, a_S1, a_S2):
     df_total['in_box_1'] = df_total['balance_1'].cumsum()
     df_total['in_box_2'] = df_total['balance_2'].cumsum()
     return df_total[df_total['time'] < t]
+
+
+if __name__ == '__main__':
+    t, a_N, a_S1, a_S2, output_file = sys.argv[1:6]
+    t, a_N, a_S1, a_S2 = map(float, [t, a_N, a_S1, a_S2])
+    df = simulate_two_boxes_process(t, a_N, a_S1, a_S2)
+    df.to_csv(output_file)

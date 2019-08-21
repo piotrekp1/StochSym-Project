@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+import sys
 
 
 def simulate_birth_death_times(t, a_N, a_S):
@@ -15,8 +16,6 @@ def simulate_birth_death_times(t, a_N, a_S):
     live_times = np.random.exponential(1 / a_S, N)
     deaths = births + live_times
     return births, deaths
-
-
 
 
 def simulate_birth_death_process(t, a_N, a_S):
@@ -41,3 +40,9 @@ def simulate_birth_death_process(t, a_N, a_S):
 
     return df_total[df_total['time'] < t]
 
+
+if __name__ == '__main__':
+    t, a_N, a_S, output_file = sys.argv[1:5]
+    t, a_N, a_S = map(float, [t, a_N, a_S])
+    df = simulate_birth_death_process(t, a_N, a_S)
+    df.to_csv(output_file)
