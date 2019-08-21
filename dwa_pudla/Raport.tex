@@ -49,6 +49,20 @@ Czyli od poprzedniego algorytmu różni się jedynie tym że losujemy dodatkowo 
 
 \section{Przykładowe trajektorie}
 
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=0.4\linewidth]{10,1,2}
+\includegraphics[width=0.4\linewidth]{10,5,1}
+\includegraphics[width=0.4\linewidth]{10,20,10,1000}
+\caption{Przykładowe trajektorie symulacji. Dwie górne to niewygładzone trajektorie dla $t=100$. Na niewygładzonych trajektoriach o wiele lepiej widać relację między ilością elementów w jednym i drugim pudełku. Na rysunkach widać ilość elementów w pierwszych pudełku (niebieska linia), ilość elementów w drugim pudełku (pomarańczowa linia) i łączna ilość (suma) elementów (zielona linia). Na dolnym wykresie przedstawiona jest trajektoria symulacji o $t=10000$ z wygładzeniem 1000 (przedstawiona średnia krocząca = 1000) ma ona bardzo podobny kształt do trajektorii z jednym pudełkiem z odpowiadającymi intensywnościami.}
+\end{figure}
+Wygenerowane wykresy są sparametryzowane 4 parametrami: \begin{itemize}
+\item $t$ - długość symulacji
+\item $a\_N - a_N$
+\item $a\_S - a_S$
+\item rolling - długość horyzontu średniej kroczącej, średnia krocząca jest konieczna dla wielu wykresów ze względu na ogromną ilośc punktów na wykresie. Pokazuje jednak ona "gęstość" punktów.
+\end{itemize}
+\newpage
 \section{Rozkład}
 
 Zacznijmy od wartości oczekiwanych. Licząc podobnie jak dla pojedynczego pudełka mozna zauważyć, że 
@@ -58,5 +72,14 @@ Zacznijmy od wartości oczekiwanych. Licząc podobnie jak dla pojedynczego pude�
 
 Zgadza sie to z oczekiwaniami:
 $X_1$ zachowuje się dokładnie tak samo jak w przypadku jednego pudła, więc wynik jest ten sam. $\mathbb{E}X_2$ bierze się stąd, że pierwsze pudło jedynie opóźnia trafienie cząstek do pudełka 2. Czyli można na to patrzeć również jak na model z jednym pudłem tylko teraz cząstka rodzi się z intensywnością $a_N$. Nastepnie czeka jakiś czas (czekanie spowodowane pierwszym pudełkiem) i trafia do pudełka numer 2. Czekanie nie wpływa jednak na średnią ilość cząstek będących w pudełku numer 2.
+
+\subsection{Estymacja kowariancji}
+
+Kowariancję estymujemy ze wzoru \[COV(X,Y) = \mathbb{E}XY - \mathbb{E}X \mathbb{E}Y \] Umiemy policzyć $\mathbb{E}Y i \mathbb{E}X$. Potrzebujemy jedynie $\mathbb{E}XY$ które liczymy w ten sam sposób - ważąc długością występowania danej wartości. Czyli \[\hat{COV(X,Y)} = \hat{\mathbb{E}XY} - \hat{\mathbb{E}X} \hat{\mathbb{E}Y}\]
+
+Generuje to problemy z obciążeniem, (stopnie swobody estymatora wariancji). Jednak skorzystamy tutaj zgodności i oszacujemy to za pomocą dostatecznie dużej próbki, żeby obciążenie było zaniedbywalne
+
+Po symulacjach z różnymi parametrami doszedłem do wniosku, że zawartości pudełek są nieskorelowane, tzn \[COV(X,Y) = 0\]
+
 
 \end{document}
