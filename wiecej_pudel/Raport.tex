@@ -11,40 +11,76 @@
 \usepackage[a5paper]{geometry}
 \graphicspath{ {./wykresy/} }
 \begin{document}
-\title{Model Chandrasekhara / Smoluchowskiego  - 2 pudła}
+\title{Model Chandrasekhara / Smoluchowskiego  - dowolna kombinacja pudeł}
 \author{Piotr Piękos}
 
 \maketitle
 
-W tym przypadku rozpatrujemy przypadek z dwoma pudełkami. 
+W tym dokumencie omówiony jest najogólniejszy przypadek modelu pudełek.
+Zakładamy tutaj, że przejścia pomiędzy pudełkami tworzą łańcuch Markowa. Dodatkowo wierzchołki $x$ są opisane dwoma parametrami: \begin{itemize}
+\item częstotliwością narodzin w danym wierzchołku $a_{xN}$
+\item średnią długością przebywania w danym wierzchołku $a_{xS}$
+\end{itemize}
+W każdym wierzchołku mającym częstotliwość narodzin większą od zera cząstki regularnie sie "rodzą". W każdym wierzchołku po wejściu do niego (lub po narodzeniu w nim) losowana jest długość życia z rozkładu wykładniczego o zadanym dla wierzchołka parametrze. Po wyjściu cząstka przechodzi do następnego wierzchołka (lub umiera) zgodnie z macierzą przejść.
 
-Osoba "rodzi się" na podstawie procesu Poissona z częstotliwością $a_N$ trafiając do pudełka 1, spędza tam czas będący zmienną losową o rozkładzie wykładniczym z parametrem $a_{S_1}$. Następnie przechodzi do drugiego pudełka w którym spędza czas będący zmienną losową o rozkładzie wykładniczym z parametrem $a_{S_2}$
-\section{Prawa Ewolucji}
+W dokumencie przedstawiony jest algorytm do symulacji, opis interfejsu oraz przykładowe ustawienia Łańcuchów wraz z trajektoriami.
 
-Prawa ewolucji są naturalnym rozszerzem praw ewolucji z procesu dla jednego pudełka. W szczególności pierwsze pudełko musi operować na dokładnie tych samych zasadach co poprzednio.
+\section{Interfejs}
+Do opisu środowiska potrzebne są dwa pliki: \begin{itemize}
+\item nodes - opisujący intensywność narodzin i długość życia we wierzchołku.
+\item transitions - opisujący macierz przejść po wyjściu z wierzchołka
+\end{itemize}
 
-\[P(X_1(t+h) = x_1 + 1, X_2(t+h)=x_2 | X_1(t) = x_1, X_2(t) = x_2) = a_N h + o(h)\]
-\[P(X_1(t+h) = x_1 - 1, X_2(t+h)=x_2 + 1| X_1(t) = x_1, X_2(t) = x_2) = a_{S_1} xh + o(h)\]
-\[P(X_1(t+h) = x_1, X_2(t+h)=x_2 - 1| X_1(t) = x_1, X_2(t) = x_2) = a_{S_2} xh + o(h)\]
-\[P(X_1(t+h) = x_1, X_2(t+h)=x_2| X_1(t) = x_1, X_2(t) = x_2) = 1 - (a_{S_1}  + a_{S_2})xh + o(h)\]
-dla każdego innego przejścia prawdopodobieństwo to $o(h)$
+Format: \newline nodes jest to plik składający się z dwóch kolumn oddzielonych liczbami. Numer wiersza odpowiada numerowi wierzchołka (licząc od 1). Pierwsza kolumna to intensywność narodzin, druga to długość życia. \newline
+transitions to surowy plik z macierzą przejść, kolumny oddzielone są spacjami. \textbf{ Pierwsza kolumna jest wyróżniona i oznacza przejście do wyróżnionego wierzchołka (śmierć)} 
 
-Przy naturalnych założeniach $x_1 > 0$ lub $x_2 > 0$ kiedy się zmniejsza.
+
+
+Przykładowe środowiska są zawarte w folderach \begin{itemize}
+\item kolko
+\item koniczynka
+\end{itemize}
+
+\section{Opis algorytmu}
+
+Wynikiem algorytmu będzie tabela ze zdarzeniami, gdzie zdarzeniem jest na przykład narodzenie cząsteczki, albo przejście jej z jednego pudła do innego. Oprócz informacji o zdarzeniu wiersz zawiera też czas wystąpienia zdarzenia
+
+Algorytm składa się z dwóch części \begin{enumerate}
+\item Narodziny cząsteczek
+\item Podróżowanie
+\end{enumerate}
+
+
+W \textbf{pierwszej} części generujemy narodzone cząsteczki - wchodzimy do każdego "rodzącego" wierzchołka, symulujemy wszystkie narodziny które będą miały miejsce w danym wierzchołku podczas ustalonego horyzontu czasu.
+
+W \textbf{drugiej} części "chodzimy" cząstkami między wierzcholkami. Ustalamy wierzchołek, dla wszystkich cząstek które aktualnie w nim przebywają losujemy czas życia oraz nowy wierzchołek. Nadpisujemy "obecny stan" i zapisujemy eventy do historii.
+
+Taka realizacja algorytmu pozwala na wektorową realizację losowania czasów życia i przejść próbek co znacząco przyspiesza czas symulacji.
+
+
+
 
 \section{Algorytm}
-
-Algorytm jest naturalnym rozszerzeniem algorytmu symulacji jednego pudełka
-
-
-
+1. Narodziny cząsteczek
 \begin{algorithmic}
-\State Gen $N \sim \textit{Poiss}(a_Nt)$
-\State for $i = 1$ to N do Gen $U_i \sim U(0, t)$, Gen $L1_i \sim \textit{Exp}(1/a_{S_1})$, Gen $L2_i \sim \textit{Exp}(1/a_{S_2})$
-\State $(T_1, ..., T_n) =$ Sort$(U_1, ..., U_n)$ otrzymujemy proces Poissona, czasy narodzin
-\State $(D1_1, ..., D1_n) = (T_1 + L1_1, ..., T_n + L1_n)$ - dodajemy niezalezne czasy zycia do czasow narodzin i mamy czasy przejscia do drugiego pudelka.
-\State $(D2_1, ..., D2_n) = (D1_1 + L2_1, ..., D1_n + L2_n)$ - dodajemy niezalezne czasy zycia do czasow narodzin i mamy czasy smierci.
-\end{algorithmic}  
+\State for $x$ in rodzące wierzchołki:
+\State \ \ \ \ Gen $N \sim \textit{Poiss}(a_{xN}t)$
+\State \ \ \ \ for $i = 1$ to N do Gen $U_i \sim U(0, t)$
+\State \ \ \ \ Dodaj pary ($x$, czas powstania) do historii oraz aktualnych wydarzeń
+\end{algorithmic} 
+"aktualne wydarzenia" oznaczają ostatnie wydarzenie z daną cząstką, jest ono nadpisywane i przechowuje informacje gdzie jest w danym "momencie" (nie jest to jednak robione chronologicznie z czasem)\newline
+2. Podróżowanie
+\begin{algorithmic}
+\State w = 1, W - ilosc wierzchołków
+\State while najmniejszy czas z aktualnych wydarzeń $< t$:
+\State \ \ \ \ weź cząstki aktualnie będące w w.
+\State \ \ \ \ Zasymuluj ich czas życia (z parametrem $a_{wN}$) oraz nowy wierzchołek
+\State \ \ \ \ zaktualizuj aktualne wydarzenia i dodaj zmienione rzeczy do historii.
+\State \ \ \ \ $w := w\ mod\  W + 1$ ($w \neq 0$, bo 0 to wierzchołek z martwymi cząsteczkami)
+\State historia zawiera wszystkie wydarzenia, teraz wystarczy je posortować i odpowiednio przetransponować żeby mieć ilość cząsteczek w danej chwili
+\end{algorithmic} 
 
-Czyli od poprzedniego algorytmu różni się jedynie tym że losujemy dodatkowo czasy przebywania w drugim pudełku.
+
+\section{Przykładowe trajektorie}
 
 \end{document}

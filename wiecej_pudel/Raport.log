@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.6.29)  1 AUG 2019 17:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.6.29)  21 AUG 2019 18:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -644,92 +644,46 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 17.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <10> on input line 21.
+(Font)              <10> on input line 20.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <7> on input line 21.
+(Font)              <7> on input line 20.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <5> on input line 21.
+(Font)              <5> on input line 20.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 21.
 
-Overfull \hbox (21.2482pt too wide) detected at line 26
-\OML/plm/m/it/10 P\OT4/cmr/m/n/10 (\OML/plm/m/it/10 X[]\OT4/cmr/m/n/10 (\OML/pl
-m/m/it/10 t \OT4/cmr/m/n/10 + \OML/plm/m/it/10 h\OT4/cmr/m/n/10 ) = \OML/plm/m/
-it/10 x[] \OT4/cmr/m/n/10 + 1\OML/plm/m/it/10 ; X[]\OT4/cmr/m/n/10 (\OML/plm/m/
-it/10 t \OT4/cmr/m/n/10 + \OML/plm/m/it/10 h\OT4/cmr/m/n/10 ) = \OML/plm/m/it/1
-0 x[]\OMS/plsy/m/n/10 j\OML/plm/m/it/10 X[]\OT4/cmr/m/n/10 (\OML/plm/m/it/10 t\
-OT4/cmr/m/n/10 ) = \OML/plm/m/it/10 x[]; X[]\OT4/cmr/m/n/10 (\OML/plm/m/it/10 t
-\OT4/cmr/m/n/10 ) = \OML/plm/m/it/10 x[]\OT4/cmr/m/n/10 ) = \OML/plm/m/it/10 a[
-]h \OT4/cmr/m/n/10 + \OML/plm/m/it/10 o\OT4/cmr/m/n/10 (\OML/plm/m/it/10 h\OT4/
-cmr/m/n/10 )
- []
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 21.
+ [1
 
-
-Overfull \hbox (41.46983pt too wide) detected at line 27
-\OML/plm/m/it/10 P\OT4/cmr/m/n/10 (\OML/plm/m/it/10 X[]\OT4/cmr/m/n/10 (\OML/pl
-m/m/it/10 t \OT4/cmr/m/n/10 + \OML/plm/m/it/10 h\OT4/cmr/m/n/10 ) = \OML/plm/m/
-it/10 x[] \OMS/plsy/m/n/10 ^^@ \OT4/cmr/m/n/10 1\OML/plm/m/it/10 ; X[]\OT4/cmr/
-m/n/10 (\OML/plm/m/it/10 t \OT4/cmr/m/n/10 + \OML/plm/m/it/10 h\OT4/cmr/m/n/10 
-) = \OML/plm/m/it/10 x[] \OT4/cmr/m/n/10 + 1\OMS/plsy/m/n/10 j\OML/plm/m/it/10 
-X[]\OT4/cmr/m/n/10 (\OML/plm/m/it/10 t\OT4/cmr/m/n/10 ) = \OML/plm/m/it/10 x[];
- X[]\OT4/cmr/m/n/10 (\OML/plm/m/it/10 t\OT4/cmr/m/n/10 ) = \OML/plm/m/it/10 x[]
-\OT4/cmr/m/n/10 ) = \OML/plm/m/it/10 a[]xh \OT4/cmr/m/n/10 + \OML/plm/m/it/10 o
-\OT4/cmr/m/n/10 (\OML/plm/m/it/10 h\OT4/cmr/m/n/10 )
- []
-
-
-Overfull \hbox (28.69202pt too wide) detected at line 28
-\OML/plm/m/it/10 P\OT4/cmr/m/n/10 (\OML/plm/m/it/10 X[]\OT4/cmr/m/n/10 (\OML/pl
-m/m/it/10 t \OT4/cmr/m/n/10 + \OML/plm/m/it/10 h\OT4/cmr/m/n/10 ) = \OML/plm/m/
-it/10 x[]; X[]\OT4/cmr/m/n/10 (\OML/plm/m/it/10 t \OT4/cmr/m/n/10 + \OML/plm/m/
-it/10 h\OT4/cmr/m/n/10 ) = \OML/plm/m/it/10 x[] \OMS/plsy/m/n/10 ^^@ \OT4/cmr/m
-/n/10 1\OMS/plsy/m/n/10 j\OML/plm/m/it/10 X[]\OT4/cmr/m/n/10 (\OML/plm/m/it/10 
-t\OT4/cmr/m/n/10 ) = \OML/plm/m/it/10 x[]; X[]\OT4/cmr/m/n/10 (\OML/plm/m/it/10
- t\OT4/cmr/m/n/10 ) = \OML/plm/m/it/10 x[]\OT4/cmr/m/n/10 ) = \OML/plm/m/it/10 
-a[]xh \OT4/cmr/m/n/10 + \OML/plm/m/it/10 o\OT4/cmr/m/n/10 (\OML/plm/m/it/10 h\O
-T4/cmr/m/n/10 )
- []
-
-
-Overfull \hbox (58.84679pt too wide) detected at line 29
-\OML/plm/m/it/10 P\OT4/cmr/m/n/10 (\OML/plm/m/it/10 X[]\OT4/cmr/m/n/10 (\OML/pl
-m/m/it/10 t \OT4/cmr/m/n/10 + \OML/plm/m/it/10 h\OT4/cmr/m/n/10 ) = \OML/plm/m/
-it/10 x[]; X[]\OT4/cmr/m/n/10 (\OML/plm/m/it/10 t \OT4/cmr/m/n/10 + \OML/plm/m/
-it/10 h\OT4/cmr/m/n/10 ) = \OML/plm/m/it/10 x[]\OMS/plsy/m/n/10 j\OML/plm/m/it/
-10 X[]\OT4/cmr/m/n/10 (\OML/plm/m/it/10 t\OT4/cmr/m/n/10 ) = \OML/plm/m/it/10 x
-[]; X[]\OT4/cmr/m/n/10 (\OML/plm/m/it/10 t\OT4/cmr/m/n/10 ) = \OML/plm/m/it/10 
-x[]\OT4/cmr/m/n/10 ) = 1 \OMS/plsy/m/n/10 ^^@ \OT4/cmr/m/n/10 (\OML/plm/m/it/10
- a[] \OT4/cmr/m/n/10 + \OML/plm/m/it/10 a[]\OT4/cmr/m/n/10 )\OML/plm/m/it/10 xh
- \OT4/cmr/m/n/10 + \OML/plm/m/it/10 o\OT4/cmr/m/n/10 (\OML/plm/m/it/10 h\OT4/cm
-r/m/n/10 )
- []
-
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] (./Raport.aux) ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] (./Raport.aux)
+ ) 
 Here is how much of TeX's memory you used:
- 4374 strings out of 492982
- 63802 string characters out of 6134896
- 124696 words of memory out of 5000000
- 7857 multiletter control sequences out of 15000+600000
- 15289 words of font info for 49 fonts, out of 8000000 for 9000
+ 4393 strings out of 492982
+ 64115 string characters out of 6134896
+ 125696 words of memory out of 5000000
+ 7872 multiletter control sequences out of 15000+600000
+ 15795 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,6n,40p,368b,210s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/
-share/texlive/texmf-dist/fonts/enc/dvips/pl/plit.enc}{/usr/share/texlive/texmf-
-dist/fonts/enc/dvips/pl/plms.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips
-/pl/plrm.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/pl/plsc.enc}{/usr/s
-hare/texlive/texmf-dist/fonts/enc/dvips/pl/plmi.enc}</usr/share/texlive/texmf-d
-ist/fonts/type1/public/pl/plbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/pl/plmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plmi
-7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plr10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/pl/plr12.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/pl/plr17.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/pl/plr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plr7.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plsy10.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/pl/plti10.pfb>
-Output written on Raport.pdf (2 pages, 58947 bytes).
+ 42i,6n,40p,403b,199s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/pl/plit.enc}{/usr/share/texliv
+e/texmf-dist/fonts/enc/dvips/pl/plms.enc}{/usr/share/texlive/texmf-dist/fonts/e
+nc/dvips/pl/plrm.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/pl/plmi.enc
+}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/pl/plbx10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/pl/plbx12.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/pl/plmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+pl/plmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plr10.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/pl/plr12.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/pl/plr17.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/pl/plsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+pl/plti10.pfb>
+Output written on Raport.pdf (4 pages, 71682 bytes).
 PDF statistics:
- 56 PDF objects out of 1000 (max. 8388607)
- 41 compressed objects within 1 object stream
+ 61 PDF objects out of 1000 (max. 8388607)
+ 44 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
