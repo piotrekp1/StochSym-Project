@@ -97,18 +97,42 @@ na krawędziach podane są prawdopodobieństwa przejścia. Jeśli wychodzące kr
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.6\linewidth]{kolko}
-\caption{\textbf{Kolko}. W początkowym wierzchołku (lewym dolnym) cząstki rodzą się z intensywnością 1 oraz parametr rozkładu wykładniczego z którego losowany jest czas życia wynosi 1. W pozostałych wierzchołkach nigdy się nie rodzi żadna cząstka i parametr długości życia wynosi 1.}
+\caption{\textbf{Kolko}. W początkowym wierzchołku (lewym dolnym) cząstki rodzą się z intensywnością a (przedstawione zostanie kilka przykładów z różną intensywnością) oraz parametr rozkładu wykładniczego z którego losowany jest czas życia wynosi 1. W pozostałych wierzchołkach nigdy się nie rodzi żadna cząstka i parametr długości życia wynosi 1.}
 \end{figure}
 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.6\linewidth]{koniczynka}
 \caption{\textbf{Koniczynka}. Tutaj w dwóch (lewym i prawym) wierzchołkach rodzą się cząsteczki. Mogą umrzeć natomiast jedynie w górnym i dolnym.}
-\end{figure}\newpage
-Parametry wybrane jako 1 dla prostoty, oczywiście nic nie stoi na przeszkodzie, żeby były dowolne
+\end{figure}
+Parametry wybrane jako 1 dla prostoty, oczywiście nic nie stoi na przeszkodzie, żeby były dowolne\newpage
+
 
 \subsection{Kolko}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=1\linewidth]{kolko20/kolko20}
+\caption{\textbf{Kolko, a=20} - Trajektorie każdego wierzchołka. \newline
+Rysunki przedstawiają trajektorie zawartości każdego z pudełek. Podobnie jak w przypadku jednego lub dwóch pudełek stabilizują się one na pewnym poziomie. Trajektorie przedstawiają symulacje dla $t=1000$ średnie były estymowane za pomocą symulacji z $t=100 000$. Średnie odpowiadają oczekiwaniom, 20,10,5,2.5 byłoby bez cyklu - teraz dochodzi część wartości z "niedobitków"   }
+\end{figure}
+
+\newpage
+\begin{figure}[h!]
+\centering
+\includegraphics[width=1\linewidth]{kolko1/kolko1}
+\caption{\textbf{Kolko, a=1} - Trajektorie każdego wierzchołka. \newline
+Podobnie jak na wyższym rysunku tutaj są wykresy trajektorii zawartości każdego z pudełek. $t=100$ dla wykresów, dla estymacji średniej $t=1000000$ (3005897 przejść między wierzchołkami). Dostatecznie małe a oraz t pozwala zobaczyć i zbadać każde pojedyncze przejście z jednego wierzchołka do drugiego   }
+\end{figure}
 \subsection{Koniczynka}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=1\linewidth]{koniczyna1/koniczyna1}
+\caption{\textbf{Koniczyna} - Trajektorie każdego wierzchołka. \newline
+ $t=100$ dla wykresów, dla estymacji średniej $t=1000000$ (11989481 przejść między wierzchołkami). Wartość oczekiwana zgadza się z oczekiwaniami, jako że prawdopodobieństwo przejścia wierzchołka przez cały cykl wynosi 50\% oraz jest on w pełni symetryczny, jedynie środkowy wierzchołek ma dwie krawędzie dochodzące do niego, ale jest to kompensowane tym, że prawdopodobieństwo dojścia przez nią wynosi 50\%  }
+\end{figure}
+
+\newpage
+
 
 \section{Uruchamianie symulacji}
 \noindent kod do uruchamiania symulacji - w folderze wiecej\_pudla::
@@ -120,4 +144,6 @@ gdzie: \begin{itemize}
 \item scheme\_name - nazwa schematu, folderu w którym są trzymane informacje o schemacie. Na przykład kolko albo koniczynka.
 \item output\_file - nazwa pliku do którego ma się zapisać symulacja (csv)
 \end{itemize}
+
+wykresy zostały stworzone w notebooku (wiecej\_pudel/)simulate.ipynb
 \end{document}

@@ -60,6 +60,15 @@ def simulate_multibox(t, nodes, transitions):
     return df_history[df_history['time'] < t]
 
 
+def add_cumsums(process_events):
+    process_events.sort_values(by='time', inplace=True)
+    for node in range(1, process_events['node_entered'].max() + 1):
+        total_diff = (process_events['node_entered'] == node).astype(int)\
+                     - (process_events['node_left'] == node).astype(int)
+        process_events[f'particles_in_{node}'] = total_diff.cumsum()
+    return process_events
+
+
 def simulate_multibox_from_scheme(t, scheme_name):
     """
     Simulate multibox process on the base of scheme named scheme_name
@@ -69,6 +78,7 @@ def simulate_multibox_from_scheme(t, scheme_name):
     """
     nodes, transitions = parse_input(scheme_name)
     process = simulate_multibox(t, nodes, transitions)
+    process = add_cumsums(process)
     return process
 
 

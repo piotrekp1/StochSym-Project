@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.6.29)  21 AUG 2019 20:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.6.29)  22 AUG 2019 20:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -686,51 +686,76 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
-<./obrazki/kolko.png, id=22, 292.09125pt x 261.97874pt>
+<./obrazki/kolko.png, id=22, 312.16624pt x 302.12875pt>
 File: ./obrazki/kolko.png Graphic file (type png)
 <use ./obrazki/kolko.png>
 Package pdftex.def Info: ./obrazki/kolko.png  used on input line 99.
-(pdftex.def)             Requested size: 176.86334pt x 158.63554pt.
+(pdftex.def)             Requested size: 176.86334pt x 171.17789pt.
 <./obrazki/koniczynka.png, id=24, 432.61626pt x 382.42876pt>
 File: ./obrazki/koniczynka.png Graphic file (type png)
 <use ./obrazki/koniczynka.png>
 Package pdftex.def Info: ./obrazki/koniczynka.png  used on input line 105.
 (pdftex.def)             Requested size: 176.86334pt x 156.34747pt.
+ [4 <./obrazki/kolko.png>] [5 <./obrazki/koniczynka.png>]
+<./obrazki/kolko20/kolko20.png, id=33, 555.07375pt x 462.72874pt>
+File: ./obrazki/kolko20/kolko20.png Graphic file (type png)
+<use ./obrazki/kolko20/kolko20.png>
+Package pdftex.def Info: ./obrazki/kolko20/kolko20.png  used on input line 114.
+
+(pdftex.def)             Requested size: 294.76926pt x 245.73225pt.
+ [6 <./obrazki/kolko20/kolko20.png>]
+<./obrazki/kolko1/kolko1.png, id=38, 555.07375pt x 462.72874pt>
+File: ./obrazki/kolko1/kolko1.png Graphic file (type png)
+<use ./obrazki/kolko1/kolko1.png>
+Package pdftex.def Info: ./obrazki/kolko1/kolko1.png  used on input line 122.
+(pdftex.def)             Requested size: 294.76926pt x 245.73225pt.
+<./obrazki/koniczyna1/koniczyna1.png, id=39, 735.74875pt x 613.29124pt>
+File: ./obrazki/koniczyna1/koniczyna1.png Graphic file (type png)
+<use ./obrazki/koniczyna1/koniczyna1.png>
+Package pdftex.def Info: ./obrazki/koniczyna1/koniczyna1.png  used on input lin
+e 129.
+(pdftex.def)             Requested size: 294.76926pt x 245.71454pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[4 <./obrazki/kolko.png>]
+[7 <./obrazki/kolko1/kolko1.png>]
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
-) [5 <./obrazki/koniczynka.png>] [6] (./Raport.aux) ) 
+) [8 <./obrazki/koniczyna1/koniczyna1.png>]
+Overfull \hbox (23.58136pt too wide) in paragraph at lines 148--149
+[]\OT4/cmr/m/n/10 wykresy zo-sta-ªy stwo-rzo-ne w no-te-bo-oku (wie-cej[]pudel/
+)simulate.ipynb 
+ []
+
+[9] (./Raport.aux) ) 
 Here is how much of TeX's memory you used:
- 6142 strings out of 492982
- 87026 string characters out of 6134896
- 160832 words of memory out of 5000000
- 9599 multiletter control sequences out of 15000+600000
+ 6163 strings out of 492982
+ 87564 string characters out of 6134896
+ 161512 words of memory out of 5000000
+ 9611 multiletter control sequences out of 15000+600000
  16299 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,6n,51p,571b,1114s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-
-dist/fonts/enc/dvips/pl/plit.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips
-/pl/plms.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/pl/plrm.enc}{/usr/s
-hare/texlive/texmf-dist/fonts/enc/dvips/pl/plmi.enc}</usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/pl/plbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/pl/plbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plmi10.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plmi7.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/pl/plr10.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/pl/plr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/pl/plr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plsy10.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plti10.pfb>
-Output written on Raport.pdf (6 pages, 98434 bytes).
+ 42i,6n,51p,820b,1114s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/pl/plit.enc}
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/pl/plms.enc}{/usr/share/texlive/
+texmf-dist/fonts/enc/dvips/pl/plrm.enc}{/usr/share/texlive/texmf-dist/fonts/enc
+/dvips/pl/plmi.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plbx10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/pl/plbx12.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/pl/plmi10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/pl/plmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/pl/plr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plr12.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/pl/plr17.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/pl/plsy10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/pl/plti10.pfb>
+Output written on Raport.pdf (9 pages, 295325 bytes).
 PDF statistics:
- 72 PDF objects out of 1000 (max. 8388607)
- 49 compressed objects within 1 object stream
+ 89 PDF objects out of 1000 (max. 8388607)
+ 57 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
