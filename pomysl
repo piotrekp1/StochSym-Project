@@ -1,5 +1,0 @@
-symulacja:
-
-
-punkty narodzenia i smierci sa niezalezne od siebie,
-najpierw wiec najpierw symulujemy narodziny w danym przedziale, dla kazdego z osobna symulujemy czas jego zycia z rozkladu wykladniczego.
